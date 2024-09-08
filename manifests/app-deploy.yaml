@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pe-wa-deployment
+  namespace: web-app
 spec:
   replicas: 6 # You can adjust the number of replicas as needed
   selector:
@@ -17,8 +18,3 @@ spec:
           image: yash5090/pe-wa:latest # Replace with the actual image tag
           ports:
             - containerPort: 5000 # Replace with the port your Tetris game listens on
-            resources:
-              requests:
-                cpu: "100m"       # Minimum CPU required
-              limits:
-                cpu: "200m"       # Maximum CPU allowed
