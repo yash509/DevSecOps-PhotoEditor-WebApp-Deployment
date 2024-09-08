@@ -16,4 +16,4 @@ spec:
       - name: pe-wa
         image: yash5090/pe-wa:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 5000
