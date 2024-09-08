@@ -15,6 +15,13 @@ spec:
     spec:
       containers:
         - name: pe-wa
-          image: yash5090/pe-wa:latest # Replace with the actual image tag
+          image: yash5090/pe-wa:latest
           ports:
-            - containerPort: 5000 # Replace with the port your Tetris game listens on
+            - containerPort: 5000
+          volumeMounts:
+          - name: pe-wa-storage
+            mountPath: /data  #Mount path inside the container
+      volumes:
+      - name: pe-wa-storage
+        persistentVolumeClaim:
+          claimName: pe-wa-pvc  # Reference to the PVC
