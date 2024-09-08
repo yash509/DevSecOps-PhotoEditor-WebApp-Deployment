@@ -14,11 +14,11 @@ spec:
           service:
             name: pe-wa-service
             port:
-              number: 80
+              number: 5000 #80
       - path: /app
         pathType: Prefix
         backend:
           service:
             name: pe-wa-service
             port:
-              number: 80
+              number: 5000 #80
