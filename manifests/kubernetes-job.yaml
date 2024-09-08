@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: pe-wa-job
-  namespace: pe-wa
+  namespace: web-app
 spec:
   template:
     spec:
